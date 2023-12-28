@@ -5,8 +5,16 @@ const messages = [
   "Apply for jobs 💼",
   "Invest your new income 🤑",
 ];
-
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+function Steps() {
   const [isOpen, setIsopen] = useState(true);
   const [step, setStep] = useState(1);
 
@@ -20,7 +28,7 @@ export default function App() {
   //   setIsopen(!isOpen);
   // }
   return (
-    <>
+    <div>
       {/* <button className="close" onClick={close}> */}
       <button className="close" onClick={() => setIsopen((is) => !is)}>
         &times;
@@ -51,6 +59,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
